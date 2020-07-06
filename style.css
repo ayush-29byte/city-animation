@@ -1,0 +1,149 @@
+*{
+	margin: 0;
+}
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	background-color: #93c3e9;
+	overflow: hidden;
+}
+.wrapper{
+                   background: url(city-bg.png) no-repeat;
+                    background-size:cover;
+                   background-position:bottom;
+                  width:100%;
+      }
+img{
+        max-width:100%;
+}
+.cloud, .air, .car, .plane{
+                                        position:absolute;
+}
+.plane1{
+            left:0;
+            top:10%;
+            animation:plane 35s linear infinite;
+}
+@keyframes plane{
+                                 0%{
+                                         opacity:0;
+                                    }
+                                 100%{
+                                             opacity:1;
+                                             left:100%;
+                                              right:-100%;
+                                   }
+}
+.plane2{
+               animation:plane-two 35s linear infinte;
+               bottom:0%;
+               left:50%;
+               z-index:-1;
+}
+@keyframes plane-two{
+                                 0%{
+                                         opacity:0.3;
+                                        transform:scale(0);
+                                    }
+                                 100%{
+                                             opacity:1;
+                                            bottom:210%;
+                                          top:-100%;
+                                          transform:scale(1) rotate(90deg) translateX(450px);
+                                      
+                                   }
+
+}
+.cloud{
+            left:-50%;
+            opacity:1;
+            animation:cloud 55s linear infinite;
+}
+@keyframes cloud{
+               0%{
+                       opacity:0.5;
+                       left:-100%;
+                   }
+               100%{
+                             opacity:1;
+                           left:100%;
+                          right:-100%;
+                        }
+               }
+.air{
+          bottom:250px;
+          left:70%;
+          z-index:-1;
+         animation:air 5s linear infinite;
+}
+.air2{
+          /*Second baloon fly after 20 second*/
+          animation-delay:20s;
+          left:20%;
+          opacity:0;
+}
+@keyframes air{
+               0%{
+                       transform:scale(0.2);
+                       opacity:0;
+                       }
+              100%{
+                        transform:scale(1);
+                        opacity:1;
+                        bottom:100%;
+                   }
+}
+.car{
+       left:-100%;
+       bottom:20px;
+      animation:car 5s linear infinite;
+}
+.car1{
+            
+}
+.car2{
+          bottom:0;
+          animation-delay:1s;
+          animation-duration:13s;
+}
+.car3{
+          bottom:40px;
+          animation-delay:2s;
+         animation-duration:8s;
+}
+.car4{
+           bottom:35px;
+           animation-delay:3s;
+          animation-duration:4s;
+}
+@keyframes car{
+                        0%{
+                                left:-200px;
+                               right:0;
+                             }
+                        100%{
+                                left:100%;
+                                right:-100%;
+                              }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
